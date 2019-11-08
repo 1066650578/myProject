@@ -1,0 +1,150 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+html{
+  width: 100%;
+  height: 100%;
+  font-size: 10px;
+}
+body{
+  width: 100%;
+  height: 100%;
+  font-size: 12px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: 100% 100%;
+}
+.wrapper{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  padding-top: 60px;
+  .song-img{
+    width: 50%;
+    height: 0;
+    padding-top: 60%;
+    position: relative;
+    margin: 0 auto;
+    .img-wrapper{
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 0;
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .song-info{
+    width: 100%;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 40px;
+    text-align: center;
+    .song-name{
+      font-size: 24px;
+      margin-top: 8px;
+      color: white;
+    }
+    .singer-name{
+     margin-top: 8px;
+    }
+    .album-name{
+      margin-top: 8px;
+    }
+  }
+  .pro{
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    .cur-time,.all-time{
+      color: white;
+      width: 60px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+
+    }
+    .pro-wrapper{
+      position: relative;
+      flex-grow: 1;
+      flex-shrink: 0;
+      overflow: hidden;
+      .pro-bottom,.pro-top{
+        position: absolute;
+        height: 1px;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.6);
+        top: 20px;
+        left: 5px;
+      }
+      .pro-top{
+        background-color: white;
+        transform: translateX(-100%);
+        .slider-pointer{
+          width: 40px;
+          height: 40px;
+          position: absolute;
+          right: -20px;
+          top: -20px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 0;
+          &::after{
+            content: "";
+            display: block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: white;
+          }
+        }
+      }
+    }
+  }
+  .control{
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    .btn-wrapper{
+      flex-grow: 1;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      background-size: 20px 20px;
+    }
+    .like-btn{
+      background-image: url("../img/icon-like.png");
+      &.liking{
+        background-image: url("../img/icon-like-solid.png");
+      }
+    }
+
+    .prev-btn{
+      background-image: url("../img/icon-prev.png");
+    }
+    .play-btn{
+      background-image: url("../img/icon-play.png");
+      &.pause{
+        background-image: url("../img/icon-pause.png");
+      }
+    }
+    .next-btn{
+      background-image: url("../img/icon-next.png");
+    }
+  .list-btn{
+    background-image: url("../img/icon-playlist.png");
+  }
+  }
+}
